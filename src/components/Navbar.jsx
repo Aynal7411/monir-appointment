@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <Link to="/" className="logo">Dr. Monir</Link>
+        <Link to="/" className="logo">Capricious Monir</Link>
         <div className="menu-toggle" onClick={() => setOpen(!open)}>
           ☰
         </div>
