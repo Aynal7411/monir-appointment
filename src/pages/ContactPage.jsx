@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./ContactPage.css";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -14,9 +15,9 @@ export default function ContactPage() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="contact-page">
       <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit} style={{ maxWidth: "400px" }}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
@@ -24,7 +25,6 @@ export default function ContactPage() {
           value={form.name}
           onChange={handleChange}
           required
-          style={{ display: "block", margin: "10px 0", padding: "8px", width: "100%" }}
         />
         <input
           type="email"
@@ -33,7 +33,6 @@ export default function ContactPage() {
           value={form.email}
           onChange={handleChange}
           required
-          style={{ display: "block", margin: "10px 0", padding: "8px", width: "100%" }}
         />
         <textarea
           name="message"
@@ -41,11 +40,8 @@ export default function ContactPage() {
           value={form.message}
           onChange={handleChange}
           required
-          style={{ display: "block", margin: "10px 0", padding: "8px", width: "100%" }}
         ></textarea>
-        <button type="submit" style={{ padding: "10px 20px", background: "blue", color: "#fff", border: "none" }}>
-          Send Message
-        </button>
+        <button type="submit">Send Message</button>
       </form>
     </div>
   );

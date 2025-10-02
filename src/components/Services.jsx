@@ -6,10 +6,12 @@ export default function Services() {
     <section className="services">
       <h2>Our Services</h2>
       <ul>
-        <li>General Health Checkups</li>
-        <li>Maternal & Child Care</li>
-        <li>Vaccination & Immunization</li>
-        <li>Emergency Care</li>
+        <li>General Health Advice for Adult and child</li>
+        <li>Physical and Mental Care</li>
+        <li>Mental Counseling for partner</li>
+        <li>Provide Nature service</li>
+        <li>Child Health and Growth Monitoring</li>
+     
       </ul>
     </section>
   );

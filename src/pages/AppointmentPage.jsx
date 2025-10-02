@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AppointmentPage.css";
 
 export default function AppointmentPage() {
   const [form, setForm] = useState({ name: "", email: "", date: "" });
@@ -13,7 +14,7 @@ export default function AppointmentPage() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="appointment-page">
       <h1>Book an Appointment</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -23,7 +24,6 @@ export default function AppointmentPage() {
           value={form.name}
           onChange={handleChange}
           required
-          style={{ display: "block", margin: "10px 0", padding: "8px", width: "100%" }}
         />
         <input
           type="email"
@@ -32,7 +32,6 @@ export default function AppointmentPage() {
           value={form.email}
           onChange={handleChange}
           required
-          style={{ display: "block", margin: "10px 0", padding: "8px", width: "100%" }}
         />
         <input
           type="date"
@@ -40,14 +39,8 @@ export default function AppointmentPage() {
           value={form.date}
           onChange={handleChange}
           required
-          style={{ display: "block", margin: "10px 0", padding: "8px", width: "100%" }}
         />
-        <button
-          type="submit"
-          style={{ padding: "10px 20px", background: "green", color: "#fff", border: "none" }}
-        >
-          Book Appointment
-        </button>
+        <button type="submit">Book Appointment</button>
       </form>
     </div>
   );
