@@ -1,0 +1,42 @@
+.mylist-container {
+  margin-top: 5px;
+  padding: 10px;
+  background: #06962ad9;
+  border-radius: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 0 6px 20px #387a591a;
+}
+
+.mylist-container h2 {
+  color: hsl(347, 90%, 46%);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.mylist {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mylist li {
+  background: #f0f4ff;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: default;
+}
+
+.mylist li:hover {
+  background: #0077ff;
+  color: white;
+  transform: translateY(-3px);
+}
