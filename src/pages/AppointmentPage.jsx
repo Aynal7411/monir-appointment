@@ -8,10 +8,21 @@ export default function AppointmentPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Appointment booked for ${form.name} on ${form.date}`);
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await fetch("http://localhost:5000/api/appointments", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form)
+    });
+    const data = await response.json();
+    alert(data.message);
+  } catch (error) {
+    alert("Failed to book appointment");
+  }
+};
+
 
   return (
     <div className="appointment-page">

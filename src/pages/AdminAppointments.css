@@ -1,0 +1,65 @@
+/* Container */
+.admin-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.admin-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Table Wrapper (for responsiveness) */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* Table */
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.appointments-table th {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+.appointments-table tr:nth-child(even) {
+  background-color: #f2f6fc;
+}
+
+/* Hover Effect */
+.appointments-table tr:hover {
+  background-color: #eaf2fb;
+  transition: background 0.3s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .appointments-table th,
+  .appointments-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .admin-title {
+    font-size: 20px;
+  }
+}
