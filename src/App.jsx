@@ -8,6 +8,8 @@ import AppointmentPage from "./pages/AppointmentPage";
 import ContactPage from "./pages/ContactPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Flower from "./components/Folwer";
+import BangladeshMap from "./components/Map";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
+      <Flower />
+       <BangladeshMap onDivisionClick={(name) => alert(`You clicked on ${name} division`)} />
       <Footer />
     </div>
   );

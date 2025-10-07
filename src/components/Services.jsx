@@ -1,6 +1,6 @@
 import React from "react";
 import "./Services.css";
-import BangladeshMap from "./Map";
+
 
 export default function Services() {
   return (
@@ -14,7 +14,7 @@ export default function Services() {
         <li>Child Health and Growth Monitoring</li>
      
       </ul>
-      <BangladeshMap onDivisionClick={(name) => alert(`You clicked on ${name} division`)} />
+     
     </section>
   );
 }

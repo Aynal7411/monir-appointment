@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 import clinicImage from "../assets/monir.jpg"; 
 import Mylist from "./Mylist";
-import Flower from "./Folwer";
+
 
 function Hero() {
   return (
@@ -15,7 +15,7 @@ function Hero() {
         <a href="/appointment" className="btn">Book Appointment</a>
       </div>
       <Mylist />
-      <Flower />
+    
     </section>
   );
 }
