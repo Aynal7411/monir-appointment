@@ -1,17 +1,31 @@
 import React from "react";
 import "./ServicesPage.css";
 
+const SERVICES = [
+  "General Health Advice",
+  "Observe Health Condition Day by Day",
+  "Sex and Skin Disease Advice",
+  "Child Health and Growth Monitoring",
+  "Mental Counseling",
+];
+
 export default function ServicesPage() {
   return (
-    <div className="services-page">
-      <h1>Monir's Services</h1>
-      <ul>
-        <li>General Health Advice</li>
-        <li>Observe Health Condition Day by Day</li>
-        <li>Sex and Skin Disease Advice</li>
-        <li>Child Health and Growth Monitoring</li>
-        <li>Mental Counseling</li>
-      </ul>
-    </div>
+    <section className="services-page">
+      <div className="container">
+        <h1 className="services-heading">Monir's <span>Services</span></h1>
+        <p className="services-subtitle">
+          We provide holistic healthcare and counseling services for adults, children, and families.
+        </p>
+        <div className="services-list">
+          {SERVICES.map((service, index) => (
+            <div key={index} className="service-item">
+              <div className="service-icon">✔️</div>
+              <p>{service}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

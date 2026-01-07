@@ -1,53 +1,87 @@
+:root {
+  --primary: #0d6efd;
+  --accent: #1f2937;
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0,0,0,0.08);
+  --text-muted: #6b7280;
+}
+
 .services-page {
-  padding: 50px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.services-page h1 {
+  background: var(--bg);
+  padding: 80px 20px;
   text-align: center;
-  color: #4facfe;
-  margin-bottom: 30px;
-  font-size: 2.5rem;
 }
 
-.services-page ul {
-  list-style: none;
-  padding: 0;
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.services-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.services-heading span {
+  color: var(--primary);
+}
+
+.services-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 50px;
+  line-height: 1.7;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.service-item {
+  background: var(--card-bg);
+  padding: 25px 20px;
+  border-radius: 16px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 15px 35px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.services-page ul li {
-  background-color: #00f2fe;
-  color: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.services-page ul li:hover {
+.service-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 25px 50px var(--card-shadow);
 }
 
-/* Responsive */
+.service-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.service-item p {
+  margin: 0;
+  font-weight: 500;
+  color: var(--accent);
+  text-align: left;
+}
+
 @media (max-width: 768px) {
-  .services-page {
-    padding: 30px 15px;
+  .services-heading {
+    font-size: 2.2rem;
   }
 
-  .services-page h1 {
-    font-size: 2rem;
-  }
-
-  .services-page ul li {
+  .services-subtitle {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-page {
+    padding: 60px 16px;
   }
 }
