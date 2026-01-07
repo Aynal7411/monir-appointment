@@ -1,60 +1,100 @@
-.mylist-container {
-  margin-top: 30px;
-  padding: 25px;
-  background: rgba(42, 180, 204, 0.9);
-  border-radius: 12px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+:root {
+  --primary: #0d6efd;
+  --dark: #1f2937;
+  --muted: #6b7280;
+  --bg-light: lab(98.18% -0.3 -1.2);
+}
+
+/* ---------- SECTION ---------- */
+.service-section {
+  margin-top: 80px;
+  padding: 60px 20px;
+  background: var(--bg-light);
+}
+
+/* ---------- CONTAINER ---------- */
+.service-container {
+  max-width: 900px;
+  margin: auto;
+  background: hsl(0, 28%, 80%);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- HEADING ---------- */
+.service-container h2 {
+  font-size: 2.2rem;
   text-align: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  color: var(--dark);
 }
 
-.mylist-container h2 {
-  color: #0077ff;
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-  font-weight: 700;
+.service-container h2 span {
+  color: var(--primary);
 }
 
-/* List Styling */
-.mylist {
+/* ---------- LIST ---------- */
+.service-list {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr; /* Mobile: single column */
-  gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
-/* Each item */
-.mylist li {
-  background: hwb(225 88% 9%);
-  color: #333;
-  padding: 15px;
-  border-radius: 10px;
-  font-weight: 500;
+/* ---------- ITEM ---------- */
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f9fbff;
+  padding: 18px 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.15);
+}
+
+/* ---------- ICON ---------- */
+.service-icon {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+/* ---------- TEXT ---------- */
+.service-text {
+  color: var(--dark);
   font-size: 1rem;
-  transition: all 0.3s ease;
-  cursor: default;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  line-height: 1.6;
 }
 
-/* Hover effect */
-.mylist li:hover {
-  background: #0077ff;
-  color: white;
-  transform: translateY(-3px);
-}
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .service-list {
+    grid-template-columns: 1fr;
+  }
 
-/* RESPONSIVE for larger screens */
-@media (min-width: 768px) {
-  .mylist {
-    grid-template-columns: repeat(2, 1fr); /* Desktop: 2 columns */
+  .service-container {
+    padding: 40px 24px;
+  }
+
+  .service-container h2 {
+    font-size: 1.9rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .mylist {
-    grid-template-columns: repeat(4, 1fr); /* Wide screens: 4 columns */
+@media (max-width: 480px) {
+  .service-section {
+    padding: 40px 16px;
+  }
+
+  .service-container h2 {
+    font-size: 1.6rem;
   }
 }

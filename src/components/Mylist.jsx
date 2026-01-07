@@ -1,19 +1,32 @@
 import React from "react";
 import "./Mylist.css";
 
-function Mylist() {
-  const items = ["Open Discussion", "Refreshment Trip Arrangement", "Provide peace Accomodation ", "Sea fish and Organic Food"];
+const SERVICES = [
+  "Open Community Discussion & Counseling",
+  "Refreshment & Guided Trip Arrangement",
+  "Peaceful & Secure Accommodation Support",
+  "Fresh Sea Fish & Organic Food Services",
+];
 
+const Mylist = () => {
   return (
-    <div className="mylist-container">
-      <h2>Monir's Clinical Service</h2>
-      <ul className="mylist">
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    </div>
+    <section className="service-section" aria-labelledby="service-heading">
+      <div className="service-container">
+        <h2 id="service-heading">
+          Monir’s <span>Clinical Services</span>
+        </h2>
+
+        <ul className="service-list">
+          {SERVICES.map((service, index) => (
+            <li key={index} className="service-item">
+              <span className="service-icon">✔</span>
+              <span className="service-text">{service}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
-}
+};
 
 export default Mylist;

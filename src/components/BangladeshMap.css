@@ -1,0 +1,95 @@
+:root {
+  --primary: #006a4e;
+  --accent: #f42a41;
+  --dark: #1f2937;
+  --muted: #6b7280;
+}
+
+/* ---------- SECTION ---------- */
+.map-section {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #f1f9f6);
+}
+
+/* ---------- HEADING ---------- */
+.map-section h2 {
+  font-size: 2.6rem;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+
+.map-section h2 span {
+  color: var(--primary);
+}
+
+/* ---------- DESCRIPTION ---------- */
+.map-description {
+  max-width: 720px;
+  margin: 0 auto 50px;
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ---------- MAP ---------- */
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.bangladesh-map {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- SVG TEXT ---------- */
+.bangladesh-map text {
+  fill: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ---------- POINTS ---------- */
+.map-points ul {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.map-points li {
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: var(--dark);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .map-section h2 {
+    font-size: 2.1rem;
+  }
+
+  .map-points ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-section {
+    padding: 70px 16px;
+  }
+
+  .map-section h2 {
+    font-size: 1.8rem;
+  }
+}
